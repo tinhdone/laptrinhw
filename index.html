@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellTech - Trang Chủ | Máy Tính & Linh Kiện Chính Hãng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🔥 Khai xuân như ý - Săn sale linh kiện đỉnh cao giảm đến 50%</span>
+            <div class="top-bar-right" id="authHeaderContainer">
+                <a href="login.html" class="admin-link"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">CELL</span><span class="logo-sub">TECH</span>
+            </a>
+            <div class="location-picker">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <span class="loc-label">Xem giá tại</span>
+                    <span class="loc-city">Hồ Chí Minh <i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Bạn cần tìm CPU, VGA, Laptop, Mainboard...">
+                <button onclick="handleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="tel:18002097" class="action-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Gọi mua hàng<br><b>1800.2097</b></span>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Cửa hàng<br><b>gần bạn</b></span>
+                </a>
+                <a href="cart.html" class="action-item cart-action">
+                    <div class="cart-icon-wrap">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </div>
+                    <span>Giỏ hàng</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-item active"><i class="fa-solid fa-house"></i> Trang chủ</a>
+            <a href="index.html" class="nav-item"><i class="fa-solid fa-laptop"></i> Laptop & MacBook</a>
+            <a href="index.html" class="nav-item"><i class="fa-solid fa-desktop"></i> PC Gaming</a>
+            <a href="index.html" class="nav-item"><i class="fa-solid fa-microchip"></i> Linh Kiện PC</a>
+            <a href="index.html" class="nav-item"><i class="fa-solid fa-keyboard"></i> Phụ Kiện & Gear</a>
+            <a href="index.html" class="nav-item"><i class="fa-solid fa-screwdriver-wrench"></i> Tự Build PC</a>
+            <a href="admin.html" class="nav-item admin-tab"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <!-- Hero Banner Section -->
+        <section class="hero-section">
+            <div class="hero-main-banner">
+                <div class="slider-container">
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80" alt="Banner 1" class="slide active">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80" alt="Banner 2" class="slide">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80" alt="Banner 3" class="slide">
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+            <div class="hero-sub-banners">
+                <div class="sub-banner"><img src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=500&q=80" alt="Sub 1"></div>
+                <div class="sub-banner"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=500&q=80" alt="Sub 2"></div>
+                <div class="sub-banner"><img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&w=500&q=80" alt="Sub 3"></div>
+            </div>
+        </section>
+
+        <!-- Perks Bar -->
+        <section class="perks-bar">
+            <div class="perk-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div><h4>Giao hàng siêu tốc</h4><p>Miễn phí vận chuyển toàn quốc</p></div>
+            </div>
+            <div class="perk-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div><h4>Bảo hành chính hãng</h4><p>1 đổi 1 trong 30 ngày đầu</p></div>
+            </div>
+            <div class="perk-item">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <div><h4>Hỗ trợ kỹ thuật 24/7</h4><p>Vệ sinh & cài đặt miễn phí</p></div>
+            </div>
+            <div class="perk-item">
+                <i class="fa-solid fa-percent"></i>
+                <div><h4>Trả góp 0% lãi suất</h4><p>Thủ tục nhanh gọn, duyệt nhanh</p></div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section-box">
+            <h2 class="section-heading">DANH MỤC SẢN PHẨM NỔI BẬT</h2>
+            <div class="categories-grid">
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=300&q=80" alt="Laptop"><span>Laptop Văn Phòng</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=300&q=80" alt="PC Gaming"><span>PC Gaming Cấu Hình Khủng</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=300&q=80" alt="CPU"><span>CPU (Bộ Vi Xử Lý)</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=300&q=80" alt="VGA"><span>Card Đồ Họa (VGA)</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=300&q=80" alt="Mainboard"><span>Bo Mạch Chủ (Main)</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1562976540-1e02c510c4f8?auto=format&fit=crop&w=300&q=80" alt="RAM SSD"><span>RAM & Ổ Cứng SSD</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=300&q=80" alt="Man hinh"><span>Màn Hình Máy Tính</span></div>
+                <div class="cat-item"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=300&q=80" alt="Gear"><span>Bàn Phím & Chuột Gaming</span></div>
+            </div>
+        </section>
+
+        <!-- Flash Sale & Expanded Products (18 items) -->
+        <section class="section-box flash-sale-box">
+            <div class="flash-header">
+                <div class="flash-title">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h2>DANH MỤC SẢN PHẨM CHÍNH HÃNG - GIÁ TỐT NHẤT</h2>
+                </div>
+                <div class="countdown">
+                    <span>Kết thúc sau:</span>
+                    <span class="time-box">02</span>:<span class="time-box">15</span>:<span class="time-box">42</span>
+                </div>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <span class="badge-discount">-18%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80" alt="RTX 4070"></div>
+                    <a href="product.html?id=1" class="product-name">Card Màn Hình ASUS ROG Strix GeForce RTX 4070 OC 12GB</a>
+                    <div class="product-specs">RTX 4070 / 12GB GDDR6X / 3 Fan</div>
+                    <div class="price-box"><span class="price-current">16.990.000₫</span><span class="price-old">20.500.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(48)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=1" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('ASUS ROG RTX 4070', 16990000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <span class="badge-discount">-15%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=80" alt="Intel i7"></div>
+                    <a href="product.html?id=2" class="product-name">CPU Intel Core i7-14700K (3.4GHz Boost up to 5.6GHz, 20 Nhân)</a>
+                    <div class="product-specs">LGA 1700 / 33MB Cache</div>
+                    <div class="price-box"><span class="price-current">10.490.000₫</span><span class="price-old">12.350.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(32)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=2" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Intel Core i7-14700K', 10490000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <span class="badge-discount">-20%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=400&q=80" alt="PC Gaming"></div>
+                    <a href="product.html?id=3" class="product-name">PC Gaming Apex Pro (i5 13400F / RTX 4060 8GB / 16GB RAM)</a>
+                    <div class="product-specs">Bảo hành 36 tháng</div>
+                    <div class="price-box"><span class="price-current">18.290.000₫</span><span class="price-old">22.900.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(65)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=3" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('PC Gaming Apex Pro', 18290000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <span class="badge-discount">-12%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=400&q=80" alt="Mainboard"></div>
+                    <a href="product.html?id=4" class="product-name">Mainboard MSI MAG Z790 TOMAHAWK WIFI (DDR5)</a>
+                    <div class="product-specs">ATX / 4 x DDR5 / Wi-Fi 6E</div>
+                    <div class="price-box"><span class="price-current">7.490.000₫</span><span class="price-old">8.500.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span>(19)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=4" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('MSI Z790 Tomahawk', 7490000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <span class="badge-discount">-15%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1562976540-1e02c510c4f8?auto=format&fit=crop&w=400&q=80" alt="RAM"></div>
+                    <a href="product.html?id=5" class="product-name">RAM Corsair Vengeance RGB 32GB (2x16GB) DDR5 6000MHz</a>
+                    <div class="product-specs">Bus 6000MHz / RGB LED</div>
+                    <div class="price-box"><span class="price-current">3.190.000₫</span><span class="price-old">3.750.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(84)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=5" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('RAM Corsair 32GB DDR5', 3190000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <span class="badge-discount">-25%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="SSD"></div>
+                    <a href="product.html?id=6" class="product-name">Ổ Cứng SSD Samsung 990 PRO 2TB M.2 NVMe PCIe 4.0</a>
+                    <div class="product-specs">Đọc 7450 MB/s / PCIe 4.0</div>
+                    <div class="price-box"><span class="price-current">4.290.000₫</span><span class="price-old">5.700.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(112)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=6" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('SSD Samsung 990 PRO 2TB', 4290000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <span class="badge-discount">-18%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=400&q=80" alt="Monitor"></div>
+                    <a href="product.html?id=7" class="product-name">Màn Hình Gaming LG UltraGear 27GR75Q-B 27 inch 240Hz</a>
+                    <div class="product-specs">QHD / 1ms / IPS 240Hz</div>
+                    <div class="price-box"><span class="price-current">6.990.000₫</span><span class="price-old">8.500.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(53)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=7" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Màn hình LG 27 inch 240Hz', 6990000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <span class="badge-discount">-15%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=400&q=80" alt="Laptop"></div>
+                    <a href="product.html?id=8" class="product-name">Laptop Gaming Acer Nitro 5 Tiger (i5-12500H / RTX 3050)</a>
+                    <div class="product-specs">15.6 FHD 144Hz / 16GB RAM</div>
+                    <div class="price-box"><span class="price-current">17.490.000₫</span><span class="price-old">20.500.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span>(97)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=8" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Laptop Acer Nitro 5', 17490000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <span class="badge-discount">-10%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=400&q=80" alt="Legion 5"></div>
+                    <a href="product.html?id=9" class="product-name">Laptop Lenovo Legion Pro 5 16IRX9 (i7-14700HX / RTX 4060)</a>
+                    <div class="product-specs">16 inch WQXGA 240Hz / 16GB RAM</div>
+                    <div class="price-box"><span class="price-current">37.990.000₫</span><span class="price-old">42.200.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(24)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=9" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Lenovo Legion Pro 5', 37990000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <span class="badge-discount">-14%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="MacBook"></div>
+                    <a href="product.html?id=10" class="product-name">MacBook Air 13 inch M3 2024 (8CPU / 8GPU / 8GB / 256GB)</a>
+                    <div class="product-specs">Apple M3 / Retina Display</div>
+                    <div class="price-box"><span class="price-current">26.990.000₫</span><span class="price-old">31.490.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(41)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=10" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('MacBook Air M3', 26990000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <span class="badge-discount">-16%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="Ryzen 7"></div>
+                    <a href="product.html?id=11" class="product-name">CPU AMD Ryzen 7 7800X3D (8 Nhân 16 Luồng, Box Chính Hãng)</a>
+                    <div class="product-specs">AM5 / 96MB Cache / Gaming Top 1</div>
+                    <div class="price-box"><span class="price-current">11.290.000₫</span><span class="price-old">13.500.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(59)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=11" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('AMD Ryzen 7 7800X3D', 11290000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <span class="badge-discount">-22%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80" alt="RTX 4060"></div>
+                    <a href="product.html?id=12" class="product-name">Card Màn Hình GIGABYTE GeForce RTX 4060 Eagle OC 8G</a>
+                    <div class="product-specs">RTX 4060 / 8GB GDDR6 / 3 Fan</div>
+                    <div class="price-box"><span class="price-current">8.290.000₫</span><span class="price-old">10.600.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span>(38)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=12" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('RTX 4060 Gigabyte', 8290000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <span class="badge-discount">-15%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=400&q=80" alt="Dell UltraSharp"></div>
+                    <a href="product.html?id=13" class="product-name">Màn Hình Dell UltraSharp U2724D 27 inch IPS Black 2K 120Hz</a>
+                    <div class="product-specs">2K QHD / IPS Black / 120Hz</div>
+                    <div class="price-box"><span class="price-current">9.890.000₫</span><span class="price-old">11.600.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(22)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=13" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Dell UltraSharp U2724D', 9890000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <span class="badge-discount">-20%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="Akko Keyboard"></div>
+                    <a href="product.html?id=14" class="product-name">Bàn Phím Cơ Không Dây Akko 3098B Multi-mode Dracula Castle</a>
+                    <div class="product-specs">Hot-swap / RGB / Akko CS Switch</div>
+                    <div class="price-box"><span class="price-current">1.890.000₫</span><span class="price-old">2.350.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(145)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=14" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Akko 3098B Dracula', 1890000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <span class="badge-discount">-17%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=400&q=80" alt="Logitech Mouse"></div>
+                    <a href="product.html?id=15" class="product-name">Chuột Gaming Logitech G Pro X Superlight 2 Wireless</a>
+                    <div class="product-specs">60g / HERO 2 Sensor / 32K DPI</div>
+                    <div class="price-box"><span class="price-current">2.990.000₫</span><span class="price-old">3.590.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(210)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=15" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Logitech G Pro X Superlight 2', 2990000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <span class="badge-discount">-15%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=400&q=80" alt="HyperX Headset"></div>
+                    <a href="product.html?id=16" class="product-name">Tai Nghe Gaming HyperX Cloud III Wireless Chính Hãng</a>
+                    <div class="product-specs">Pin 120h / DTS Spatial Audio</div>
+                    <div class="price-box"><span class="price-current">2.490.000₫</span><span class="price-old">2.950.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span>(76)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=16" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('HyperX Cloud III Wireless', 2490000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <span class="badge-discount">-18%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80" alt="Ergonomic Chair"></div>
+                    <a href="product.html?id=17" class="product-name">Ghế Công Thái Học Ergonomic Sihoo M57 Chính Hãng</a>
+                    <div class="product-specs">Lưới thoáng khí / Ngả 126 độ</div>
+                    <div class="price-box"><span class="price-current">3.290.000₫</span><span class="price-old">3.990.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(130)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=17" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('Ghế Sihoo M57', 3290000)">Thêm giỏ</button></div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <span class="badge-discount">-15%</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=400&q=80" alt="PSU ROG Thor"></div>
+                    <a href="product.html?id=18" class="product-name">Nguồn máy tính ASUS ROG Thor 850P II 850W Platinum</a>
+                    <div class="product-specs">850W / 80 Plus Platinum / OLED</div>
+                    <div class="price-box"><span class="price-current">5.490.000₫</span><span class="price-old">6.490.000₫</span></div>
+                    <div class="rating-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(29)</span></div>
+                    <div class="card-btn-group"><a href="product.html?id=18" class="btn-detail">Chi tiết</a><button class="btn-buy" onclick="addToCart('ASUS ROG Thor 850W', 5490000)">Thêm giỏ</button></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>Tổng đài hỗ trợ miễn phí</h4>
+                <p>Gọi mua hàng: <b>1800.2097</b> (7h30 - 22h00)</p>
+                <p>Gọi khiếu nại: <b>1800.2063</b> (8h00 - 21h30)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Thông tin chính sách</h4>
+                <ul>
+                    <li><a href="#">Mua hàng online & trả góp</a></li>
+                    <li><a href="#">Chính sách giao hàng tận nơi</a></li>
+                    <li><a href="#">Tra cứu bảo hành điện tử</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hệ thống cửa hàng</h4>
+                <ul>
+                    <li><a href="#">120+ Chi nhánh toàn quốc</a></li>
+                    <li><a href="#">Trung tâm bảo hành ủy quyền</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Đăng ký nhận ưu đãi</h4>
+                <div class="newsletter">
+                    <input type="email" placeholder="Nhập email của bạn...">
+                    <button>Gửi</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CellTech Vietnam. All rights reserved. Module tích hợp Full E-commerce & Admin.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">Đã thêm sản phẩm vào giỏ hàng thành công!</div>
+    <script src="script.js"></script>
+</body>
+</html>
